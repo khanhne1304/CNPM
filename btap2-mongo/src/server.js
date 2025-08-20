@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
+
 const connectDB = require("./config/mongo");
-const webRoutes = require("./route/web");
+const webRoutes = require("./route/web"); // chú ý: thư mục bạn đặt tên là "route" chứ không phải "routes"
 
 const app = express();
 const port = 8088;
@@ -10,9 +12,9 @@ const port = 8088;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// View engine
+// ✅ Cấu hình view engine EJS
 app.set("view engine", "ejs");
-app.set("views", "./src/views");
+app.set("views", path.join(__dirname, "views"));
 
 // Kết nối MongoDB
 connectDB();
