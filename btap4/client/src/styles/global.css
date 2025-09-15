@@ -1,0 +1,3 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+.page { max-width: 560px; margin: 40px auto; }
