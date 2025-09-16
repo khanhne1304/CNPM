@@ -48,6 +48,28 @@
 .filter-toggle {
   background: #28a745 !important;
 }
+.search-container {
+  position: sticky; /* Giữ cố định khi cuộn */
+  top: 0;
+  background: white;
+  z-index: 100;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Đảm bảo search bar không co giãn khi filter mở */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap; /* ❌ không cho wrap */
+  min-height: 60px; /* ✅ giữ chiều cao cố định */
+}
+
+.search-bar input {
+  flex: 0 0 300px; /* luôn giữ chiều rộng cố định */
+}
 
 .filter-toggle:hover {
   background: #218838 !important;

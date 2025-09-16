@@ -77,7 +77,8 @@ export default function SearchPage() {
     <div className="container">
       <h1 className="title">Tìm kiếm sản phẩm</h1>
 
-      <div className="search-bar">
+      <div className="search-container">
+        <div className="search-bar">
         <input
           type="text"
           placeholder="Nhập từ khóa..."
@@ -91,6 +92,7 @@ export default function SearchPage() {
         >
           {showFilters ? 'Ẩn bộ lọc' : 'Hiện bộ lọc'}
         </button>
+      </div>
       </div>
 
       {showFilters && (
