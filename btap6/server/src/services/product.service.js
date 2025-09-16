@@ -38,6 +38,7 @@ export async function searchProducts(filters) {
         query: filters.keyword,
         fields: ["name", "description", "brand", "category", "tags"],
         fuzziness: "AUTO",
+        minimum_should_match: "90%"
       },
     });
   }
